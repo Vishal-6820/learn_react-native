@@ -2,6 +2,7 @@ import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 
 import Flatlist from './screen/Flatlist';
+import DrawerNavigation from './navigation/DrawerNavigation';
 
 function App(): React.JSX.Element {
   return (
@@ -9,7 +10,8 @@ function App(): React.JSX.Element {
       style={{
         flex: 1,
       }}>
-      <Flatlist />
+      {/* <Flatlist /> */}
+      <DrawerNavigation />
     </View>
   );
 }
