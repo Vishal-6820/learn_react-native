@@ -160,12 +160,13 @@ export default function DrawerNavigation() {
             style={{
               flex: 1,
               width: '100%',
-              height: 70,
+              height: 60,
               flexDirection: 'row',
               alignItems: 'center',
               justifyContent: 'space-evenly',
               position: 'absolute',
               bottom: 20,
+              backgroundColor: '#ffbe33',
             }}>
             <TouchableOpacity
               style={{
@@ -199,7 +200,7 @@ export default function DrawerNavigation() {
                 alignItems: 'center',
               }}>
               <Image
-                source={require('../assets/images/library.png')}
+                source={require('../assets/images/open-book.png')}
                 style={{height: 30, width: 30}}
               />
             </TouchableOpacity>
