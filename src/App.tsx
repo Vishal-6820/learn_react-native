@@ -1,21 +1,8 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import AppNavigator from './navigation/AppNavigator';
 
-import Flatlist from './screen/Flatlist';
-import DrawerNavigation from './navigation/DrawerNavigation';
-
-function App(): React.JSX.Element {
-  return (
-    <View
-      style={{
-        flex: 1,
-      }}>
-      {/* <Flatlist /> */}
-      <DrawerNavigation />
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({});
+const App = () => {
+  return <AppNavigator />;
+};
 
 export default App;

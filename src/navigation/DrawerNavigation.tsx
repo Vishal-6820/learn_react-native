@@ -8,8 +8,12 @@ import {
   View,
 } from 'react-native';
 import React, {useRef, useState} from 'react';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
+type Props = NativeStackScreenProps<RootStackParamList, 'DrawerNavigation'>;
 
 export default function DrawerNavigation() {
+  const navigation = useNavigation();
   const [menuShow, setMenuShow] = useState(false);
   const moveToRight = useRef(new Animated.Value(0)).current;
   const scale = useRef(new Animated.Value(1)).current;
@@ -36,7 +40,7 @@ export default function DrawerNavigation() {
       icon: require('../assets/images/chat.png'),
     },
     {
-      name: 'Add Friends',
+      name: 'AddFriends',
       icon: require('../assets/images/add-friend.png'),
     },
   ];
@@ -69,6 +73,7 @@ export default function DrawerNavigation() {
         }}
         onPress={() => {
           setSelectedMenuIndex(index);
+          navigation.navigate(item.name);
         }}>
         <Image
           source={item.icon}
