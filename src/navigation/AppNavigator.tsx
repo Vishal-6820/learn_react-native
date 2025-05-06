@@ -5,6 +5,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import Home from '../screen/Home';
 import Flatlist from '../screen/Flatlist';
 import DrawerNavigation from './DrawerNavigation';
+import ShimmerEffect from '../screen/ShimmerEffect';
 
 const Stack = createNativeStackNavigator();
 
@@ -29,6 +30,13 @@ export default function AppNavigator() {
         <Stack.Screen
           name={'Flatlist'}
           component={Flatlist}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name={'Library'}
+          component={ShimmerEffect}
           options={{
             headerShown: false,
           }}

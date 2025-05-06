@@ -70,6 +70,7 @@ import {
 } from 'react-native';
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
+import ShimmerEffect from './ShimmerEffect';
 
 export default function Home() {
   const [limit] = useState(10);
