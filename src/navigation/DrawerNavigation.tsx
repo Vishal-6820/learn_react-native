@@ -18,7 +18,7 @@ export default function DrawerNavigation() {
   const moveToRight = useRef(new Animated.Value(0)).current;
   const scale = useRef(new Animated.Value(1)).current;
   const [selectedMenuIndex, setSelectedMenuIndex] = useState(0);
-  const menu = [
+  const menu: any = [
     {
       name: 'Home',
       icon: require('../assets/images/home.png'),
