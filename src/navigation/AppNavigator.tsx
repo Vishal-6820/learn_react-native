@@ -7,6 +7,7 @@ import Flatlist from '../screen/Flatlist';
 import DrawerNavigation from './DrawerNavigation';
 import ShimmerEffect from '../screen/ShimmerEffect';
 import Explore from '../screen/Explore';
+import Friends from '../screen/Friends';
 
 const Stack = createNativeStackNavigator();
 
@@ -45,6 +46,13 @@ export default function AppNavigator() {
         <Stack.Screen
           name={'Explore'}
           component={Explore}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name={'Friends'}
+          component={Friends}
           options={{
             headerShown: false,
           }}
