@@ -8,6 +8,8 @@ import DrawerNavigation from './DrawerNavigation';
 import ShimmerEffect from '../screen/ShimmerEffect';
 import Explore from '../screen/Explore';
 import Friends from '../screen/Friends';
+import ProductListing from '../screen/ProductListing';
+import Cart from '../screen/Cart';
 
 const Stack = createNativeStackNavigator();
 
@@ -53,6 +55,20 @@ export default function AppNavigator() {
         <Stack.Screen
           name={'Friends'}
           component={Friends}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name={'ProductListing'}
+          component={ProductListing}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name={'Cart'}
+          component={Cart}
           options={{
             headerShown: false,
           }}
