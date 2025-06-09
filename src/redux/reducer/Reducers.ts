@@ -14,7 +14,9 @@ export const Reducers = (state = initialState, action: any) => {
     }
 
     case Remove_Item: {
-      const updatedCart = state.cart.filter((_, idx) => idx !== action.payload);
+      const updatedCart = state.cart.filter(
+        (item, idx) => idx !== action.payload,
+      );
       return {
         ...state,
         cart: updatedCart,
